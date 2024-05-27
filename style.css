@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --primary-color: #496989;
+  --menu-bg-color: #cacecf;
+  --sidebar-bg-color: #dddddd;
+  --main-bg-color: #eeeeee;
+  --footer-bg-color: #dddddd;
+  --footer-color: #333;
+  --border: 1px solid rgba(158, 163, 166, 0.1);
+  --quinary-color: #ecf0f1;
+  --senary-color: #95a5a6;
+  --font-color: #ecf0f1;
+  --font-color-light: #bdc3c7;
+  --font-color-dark: #7f8c8d;
+  --border-color: #bdc3c7;
+  --link-color: #2980b9;
+  --link-color-hover: #3498db;
+  --transition-speed: 600ms;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #5f778b;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 80px 300px 1fr;
+  grid-template-rows: 60px 1fr 30px;
+  height: 100vh;
+  max-width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.menu {
+  background-color: var(--menu-bg-color);
+  border-right: var(--border);
+  color: var(--font-color);
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg-color);
+  border-right: var(--border);
+  color: var(--font-color);
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.main {
+  background-color: var(--main-bg-color);
+  color: var(--font-color);
+  grid-column: 3 / -1;
+  grid-row: 2 / 3;
+}
+
+.footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-color);
+  border-top: var(--border);
+  font-size: 12px;
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
