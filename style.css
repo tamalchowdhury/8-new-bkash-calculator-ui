@@ -12,7 +12,7 @@
   --senary-color: #95a5a6;
   --font-color: #ecf0f1;
   --font-color-light: #bdc3c7;
-  --font-color-dark: #7f8c8d;
+  --font-color-dark: #43494a;
   --border-color: #bdc3c7;
   --link-color: #2980b9;
   --link-color-hover: #3498db;
@@ -33,8 +33,8 @@ body {
 
 .app {
   display: grid;
-  grid-template-columns: 80px 300px 1fr;
-  grid-template-rows: 60px 1fr 30px;
+  grid-template-columns: 100px 300px 1fr;
+  grid-template-rows: 60px 1fr;
   height: 100vh;
   max-width: 100%;
   background-color: #fff;
@@ -64,6 +64,37 @@ body {
   grid-row: 2 / 3;
 }
 
+.menu__item {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--font-color-dark);
+  row-gap: 7px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.menu__item:hover,
+.menu__item.active {
+  background-color: gray;
+  color: var(--font-color);
+}
+
+.menu__item:hover .menu__img {
+  filter: grayscale(70%);
+}
+
+.menu__img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  filter: grayscale(100%);
+  border-radius: 15px;
+}
 .sidebar {
   background-color: var(--sidebar-bg-color);
   border-right: var(--border);
