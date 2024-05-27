@@ -65,13 +65,14 @@ body {
 }
 
 .menu__item {
-  height: 100px;
   display: flex;
   flex-direction: column;
   font-size: 14px;
   font-weight: bold;
   color: var(--font-color-dark);
   row-gap: 7px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -101,6 +102,28 @@ body {
   color: var(--font-color);
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  row-gap: 10px;
+  color: #333;
+}
+
+.sidebar__item {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sidebar__item.active {
+  background-color: var(--senary-color);
+  font-weight: bold;
+}
+
+.sidebar__item:hover {
+  background-color: var(--quinary-color);
 }
 
 .main {
